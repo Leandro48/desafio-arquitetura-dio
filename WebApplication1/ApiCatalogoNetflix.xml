@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiCatalogoNetflix</name>
+    </assembly>
+    <members>
+        <member name="M:ApiCatalogoNetflix.Controllers.V1.SeriesController.Obter(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos as séries de forma paginada
+            </summary>
+            <remarks>
+            Não é possível retornar as séries sem paginação
+            </remarks>
+            <param name="pagina">Indica qual página está sendo consultada. Mínimo 1</param>
+            <param name="quantidade">Indica a quantidade de reistros por página. Mínimo 1 e máximo 50</param>
+            <response code="200">Retorna a lista de séries</response>
+            <response code="204">Caso não haja séries</response>
+            
+        </member>
+        <member name="M:ApiCatalogoNetflix.Controllers.V1.SeriesController.Obter(System.Guid)">
+            <summary>
+            Buscar uma série pelo seu Id
+            </summary>
+            <param name="idJogo">Id da série buscada</param>
+            <response code="200">Retorna a série filtrada</response>
+            <response code="204">Caso não haja série com este id</response>
+            
+        </member>
+    </members>
+</doc>
